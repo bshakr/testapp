@@ -1,15 +1,14 @@
-default: &default
+development:
   adapter: postgresql
+  database: testapp_development
   encoding: utf8
 
-development:
-  << *default
-  database: testapp_development
-
 test:
-  << *default
+  adapter: postgresql
   database: testapp_test
+  encoding: utf8
 
 production:
-  << *default
+  adapter: postgresql
   database: testapp_production
+  encoding: utf8
